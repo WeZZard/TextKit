@@ -9,7 +9,16 @@
 /* Begin PBXBuildFile section */
 		9C04DB5428565D70002A452F /* TextKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C04DB4B28565D70002A452F /* TextKit.framework */; };
 		9C04DB5928565D70002A452F /* TextKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C04DB5828565D70002A452F /* TextKitTests.swift */; };
-		9C04DB5A28565D70002A452F /* TextKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C04DB4E28565D70002A452F /* TextKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C04DB6428565DB2002A452F /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C04DB6328565DB2002A452F /* TextView.swift */; };
+		9C933ECD2856E1CB00064000 /* TextFragment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C933ECC2856E1CB00064000 /* TextFragment.swift */; };
+		9C933ECF2856F4E100064000 /* TextFragmentEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C933ECE2856F4E100064000 /* TextFragmentEnvironment.swift */; };
+		9C933ED12856F7F300064000 /* TextEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C933ED02856F7F300064000 /* TextEnvironment.swift */; };
+		9C933ED52856FAD800064000 /* TextRenderingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C933ED42856FAD800064000 /* TextRenderingView.swift */; };
+		9C933ED72856FAE200064000 /* TextFragmentRenderingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C933ED62856FAE200064000 /* TextFragmentRenderingView.swift */; };
+		9C933ED92856FB1400064000 /* TextLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C933ED82856FB1400064000 /* TextLayout.swift */; };
+		9C933EDB2857016F00064000 /* TextSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C933EDA2857016F00064000 /* TextSpace.swift */; };
+		9C933EDD2857034600064000 /* View+TextSpaceOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C933EDC2857034600064000 /* View+TextSpaceOrder.swift */; };
+		9C933EDF285704CD00064000 /* TextEnvironmentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C933EDE285704CD00064000 /* TextEnvironmentManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,9 +33,18 @@
 
 /* Begin PBXFileReference section */
 		9C04DB4B28565D70002A452F /* TextKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TextKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9C04DB4E28565D70002A452F /* TextKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextKit.h; sourceTree = "<group>"; };
 		9C04DB5328565D70002A452F /* TextKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TextKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C04DB5828565D70002A452F /* TextKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextKitTests.swift; sourceTree = "<group>"; };
+		9C04DB6328565DB2002A452F /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
+		9C933ECC2856E1CB00064000 /* TextFragment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFragment.swift; sourceTree = "<group>"; };
+		9C933ECE2856F4E100064000 /* TextFragmentEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFragmentEnvironment.swift; sourceTree = "<group>"; };
+		9C933ED02856F7F300064000 /* TextEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEnvironment.swift; sourceTree = "<group>"; };
+		9C933ED42856FAD800064000 /* TextRenderingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRenderingView.swift; sourceTree = "<group>"; };
+		9C933ED62856FAE200064000 /* TextFragmentRenderingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFragmentRenderingView.swift; sourceTree = "<group>"; };
+		9C933ED82856FB1400064000 /* TextLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextLayout.swift; sourceTree = "<group>"; };
+		9C933EDA2857016F00064000 /* TextSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextSpace.swift; sourceTree = "<group>"; };
+		9C933EDC2857034600064000 /* View+TextSpaceOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+TextSpaceOrder.swift"; sourceTree = "<group>"; };
+		9C933EDE285704CD00064000 /* TextEnvironmentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEnvironmentManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +87,8 @@
 		9C04DB4D28565D70002A452F /* TextKit */ = {
 			isa = PBXGroup;
 			children = (
-				9C04DB4E28565D70002A452F /* TextKit.h */,
+				9C933ED22856F91200064000 /* Prelude */,
+				9C933ED32856F91900064000 /* Core */,
 			);
 			path = TextKit;
 			sourceTree = "<group>";
@@ -82,6 +101,30 @@
 			path = TextKitTests;
 			sourceTree = "<group>";
 		};
+		9C933ED22856F91200064000 /* Prelude */ = {
+			isa = PBXGroup;
+			children = (
+				9C04DB6328565DB2002A452F /* TextView.swift */,
+				9C933ECC2856E1CB00064000 /* TextFragment.swift */,
+				9C933EDA2857016F00064000 /* TextSpace.swift */,
+				9C933EDC2857034600064000 /* View+TextSpaceOrder.swift */,
+			);
+			path = Prelude;
+			sourceTree = "<group>";
+		};
+		9C933ED32856F91900064000 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				9C933ED82856FB1400064000 /* TextLayout.swift */,
+				9C933ED02856F7F300064000 /* TextEnvironment.swift */,
+				9C933EDE285704CD00064000 /* TextEnvironmentManager.swift */,
+				9C933ED42856FAD800064000 /* TextRenderingView.swift */,
+				9C933ED62856FAE200064000 /* TextFragmentRenderingView.swift */,
+				9C933ECE2856F4E100064000 /* TextFragmentEnvironment.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -89,7 +132,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C04DB5A28565D70002A452F /* TextKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,6 +186,7 @@
 				TargetAttributes = {
 					9C04DB4A28565D70002A452F = {
 						CreatedOnToolsVersion = 14.0;
+						LastSwiftMigration = 1400;
 					};
 					9C04DB5228565D70002A452F = {
 						CreatedOnToolsVersion = 14.0;
@@ -191,6 +234,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C933EDD2857034600064000 /* View+TextSpaceOrder.swift in Sources */,
+				9C933ED12856F7F300064000 /* TextEnvironment.swift in Sources */,
+				9C933ECD2856E1CB00064000 /* TextFragment.swift in Sources */,
+				9C933ED52856FAD800064000 /* TextRenderingView.swift in Sources */,
+				9C933EDB2857016F00064000 /* TextSpace.swift in Sources */,
+				9C933ED92856FB1400064000 /* TextLayout.swift in Sources */,
+				9C04DB6428565DB2002A452F /* TextView.swift in Sources */,
+				9C933ED72856FAE200064000 /* TextFragmentRenderingView.swift in Sources */,
+				9C933EDF285704CD00064000 /* TextEnvironmentManager.swift in Sources */,
+				9C933ECF2856F4E100064000 /* TextFragmentEnvironment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,6 +388,7 @@
 		9C04DB5E28565D70002A452F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -354,7 +408,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.WeZZardDesign.TextKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -362,6 +418,7 @@
 		9C04DB5F28565D70002A452F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -381,6 +438,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.WeZZardDesign.TextKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -389,6 +447,7 @@
 		9C04DB6128565D70002A452F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -403,6 +462,7 @@
 		9C04DB6228565D70002A452F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
